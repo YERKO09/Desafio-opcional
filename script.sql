@@ -34,7 +34,6 @@ drop table jugadores;
 drop table equipos;
 drop table usuarios;
 
-SELECT * FROM equipos;
 
 INSERT INTO jugadores (id_equipo, name, position)
 VALUES
@@ -74,13 +73,13 @@ VALUES
 SELECT * FROM jugadores;
 
 --nombre del jugadores y su posición
-SELECT j.name, p.name AS "posicion"
-FROM jugadores j
-INNER JOIN posiciones p 
-ON p.id = j.position
-WHERE j.id_equipo = 1
-ORDER BY j.name;
+-- SELECT j.name, p.name AS "posicion"
+-- FROM jugadores j
+-- INNER JOIN posiciones p 
+-- ON p.id = j.position
+-- WHERE j.id_equipo = 1
+-- ORDER BY j.name;
 
-INSERT INTO usuarios VALUES (DEFAULT, 'admin', '1234');
+-- INSERT INTO usuarios VALUES (DEFAULT, 'admin', '1234');
 
 SELECT * FROM usuarios;
