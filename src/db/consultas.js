@@ -90,6 +90,14 @@ const addPlayer = async ({ jugador, teamID }) => {
     }
 }
 
+
+const getUsers = async () => {
+    const query = "SELECT * FROM usuarios;"
+    const {rows} = await pool.query(query);
+    // console.log('Rows:', rows);   
+    return rows
+}
+
 const registrarUsuario = async (usuario) => {
 
     try {
@@ -119,4 +127,4 @@ const registrarUsuario = async (usuario) => {
     
 }
 
-module.exports = { getTeams, addTeam, getPlayers, addPlayer, verificarCredenciales, registrarUsuario }
+module.exports = { getTeams, addTeam, getPlayers, addPlayer, verificarCredenciales, getUsers, registrarUsuario }

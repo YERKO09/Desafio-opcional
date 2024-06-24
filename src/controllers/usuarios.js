@@ -1,4 +1,9 @@
-const { registrarUsuario } = require('../db/consultas')
+const { registrarUsuario, getUsers } = require('../db/consultas')
+
+const obtenerUsuarios = async (req, res) => {
+    const usuario = await getUsers()
+    res.json(usuario)
+}
 
 const agregarUsuario = async (req, res) => {
     try {
@@ -10,4 +15,4 @@ const agregarUsuario = async (req, res) => {
     }
 }
 
-module.exports = { agregarUsuario }
+module.exports = { agregarUsuario, obtenerUsuarios }

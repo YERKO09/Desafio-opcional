@@ -1,13 +1,17 @@
 ###GET EQUIPOS
-GET http://127.0.0.1:3000/equipos
+GET http://127.0.0.1:3000/api/equipos
 Content-Type: application/json
 
 ###GET JUGADORES DE UN EQUIPO
-GET http://127.0.0.1:3000/equipos/1/jugadores
+GET http://127.0.0.1:3000/api/equipos/1/jugadores
+Content-Type: application/json
+
+###GET USUARIOSapi/
+GET http://127.0.0.1:3000/api/usuarios
 Content-Type: application/json
 
 ###POST LOGIN
-POST http://127.0.0.1:3000/login
+POST http://127.0.0.1:3000/api/login
 Content-Type: application/json
 
 {
@@ -16,26 +20,26 @@ Content-Type: application/json
 }
 
 ###POST REGISTRAR UN EQUIPO
-POST http://127.0.0.1:3000/equipos
+POST http://127.0.0.1:3000/api/equipos
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzE4Njg0NDkwfQ.t7Im61SPBpqlQ1RkWcF3g3YpVSqyhn7dah_r9WqSvVk
 
 {
-    "name": "FC Santiago Wanderers"
+    "name": "FC Cobreloa"
 }
 
 ###POST REGISTRAR UN JUGADOR
-POST http://127.0.0.1:3000/equipos/1/jugadores
+POST http://127.0.0.1:3000/api/equipos/4/jugadores
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzE4Njg0NDkwfQ.t7Im61SPBpqlQ1RkWcF3g3YpVSqyhn7dah_r9WqSvVk
 
 {
-    "name": "Arturo Vidal",
-    "position": 2
+    "name": "Gary Medel",
+    "position": 3
 }
 
 ###POST REGISTRAR UN USUARIO
-POST http://127.0.0.1:3000/usuarios
+POST http://127.0.0.1:3000/api/usuarios
 Content-Type: application/json
 
 {
